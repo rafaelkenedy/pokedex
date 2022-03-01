@@ -11,8 +11,7 @@ export const StyContainer = styled.View`
     justify-content: space-between;
     align-items: center;
     width: 249px;
-    height: 32px;
-    background-color: yellow;
+    height: 32px;    
     flex-direction: row;
 `;
 export const StyTitle = styled.Text`

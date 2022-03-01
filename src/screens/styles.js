@@ -1,10 +1,5 @@
 import { RFValue } from 'react-native-responsive-fontsize'
 import styled from 'styled-components/native'
-export const StyTop = styled.View`
-    background-color: ${({ theme }) => theme.colors.primary};
-    height: 17px;
-
-`;
 
 
 export const StyWrapper = styled.View`
@@ -15,7 +10,7 @@ export const StyWrapper = styled.View`
     margin-left: 42px;
     margin-right: 42px;       
     height: 54px;
-    color: green;
+    //background-color: green;
     flex-direction: row;
 
 `;
@@ -45,9 +40,10 @@ export const StyButton = styled.TouchableOpacity`
 export const StyFavoriteButton = styled.TouchableOpacity`
     //width: 24px;
     //height: 24px;    
-    //margin-left: 23px;
-    
-    
+    //margin-left: 23px;   
+`;
+
+export const StyButtonCard = styled.TouchableOpacity`
 `;
 
 

@@ -1,27 +1,31 @@
 import React from 'react';
+import theme from '../../global/styles/theme';
 
 
-import { 
+import {
   StyContainer,
   StyId,
   StyName,
-  StyPkImage
-
+  StyPkImage,
+  StyBot
 } from './styles';
+
+
 
 export function PkCard({
   id,
-  type,
+  typeColor,
   name,
-
-}){
+}) {
   return (
-    
-    <StyContainer>
 
-      <StyId>{id}</StyId>
-      <StyPkImage source={{uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}}/>
-      <StyName>{name}</StyName>
+
+    <StyContainer style={{ borderColor: typeColor }}>
+      <StyId style={{ color: typeColor }}>{'#'}{id}</StyId>
+      <StyPkImage source={{ uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png` }} />
+      <StyBot style={{backgroundColor: typeColor}}>
+        <StyName>{name}</StyName>
+      </StyBot>
     </StyContainer>
   );
 }

@@ -13,16 +13,14 @@ export const StyWrapper = styled.View`
     margin-top: 51px;
     justify-content: space-between;
     margin-left: 42px;
-    margin-right: 42px;
-    background-color: yellow;    
+    margin-right: 42px;       
     height: 54px;
     color: green;
     flex-direction: row;
 
 `;
 export const StyContainer = styled.View`
-    
-    
+        
     justify-content: space-between;
     align-items: center;
     width: 85%;
@@ -37,16 +35,11 @@ export const StyTextInput = styled.TextInput`
     
     margin-left: 40px;
     width: 60%;
-    
-    background-color: green;     
     font-family: 'Poppins-Regular';
 `;
 
 export const StyButton = styled.TouchableOpacity`
-    margin-right: 19px;   
-    
-    
-    
+    margin-right: 19px; 
 `;
 
 export const StyFavoriteButton = styled.TouchableOpacity`

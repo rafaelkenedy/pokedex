@@ -1,4 +1,7 @@
-# 💻 pokedex
+# 💻 pokedex!
+
+[cover](https://user-images.githubusercontent.com/35613507/156272468-180d57a4-6a75-45dd-aef0-d3bb6a844155.jpg)
+
 
 Desafio para desenvolver uma pokedex do camp ioasys
 

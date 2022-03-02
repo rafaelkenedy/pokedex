@@ -4,12 +4,13 @@
   ![cover](cover.jpg?style=flat)
 
 <p>
+  
 Desafio para desenvolver uma pokedex do camp ioasys
 
-[x] Listar pokémons
-[x] Buscar pokémon por nome
-[ ] Ativar ou desativar dark mode
-[ ] Listar pokémons favoritos
+- Listar pokémons
+- Buscar pokémon por nome
+- Ativar ou desativar dark mode
+- Listar pokémons favoritos
 
 Conceitos a serem abordados
 

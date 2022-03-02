@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { FlatList, Button, SafeAreaView, Text, View } from 'react-native'
+import { FlatList, SafeAreaView, Text, View } from 'react-native'
 import LupaIcon from '../../assets/icons/lupa.svg'
 import HeartIcon from '../../assets/icons/heart.svg'
-//import { useDispatch, useSelector } from 'react-redux'
-//import { incremented, decremented } from '../store/slices/counterSlice'
 import { StyWrapper, StyContainer, StyTextInput, StyButton, StyFavoriteButton, StyButtonCard } from './styles';
 import { Header } from '../components/Header'
 import { PkCard } from '../components/PkCard'
@@ -14,62 +12,33 @@ const Home = () => {
     //const baseURL = "https://pokeapi.co/api/v2/pokemon"
     const [pokemons, setPokemons] = useState([])
     const [query, setQuery] = useState('')
-    const [pkType, setPkType] = useState('')
-    //const [pokemon, setPokemon] = useState([])
+    const [pkTypes, setPkTypes] = useState('')
 
     useEffect(() => {
         async function handleRequest() {
             try {
                 const { data } = await api.get('/?offset=0&limit=60')
                 setPokemons(data.results)
-                //setPkType(data.types[0].type.name)
-                //console.log(data.types[0].type.name)
-
             } catch (error) {
-
+                console.warn(error)
             }
         }
         handleRequest()
     }, [])
 
-    async function getType(query) {
-        try {
-            const { data } = await api.get(`/${query}`)
-            //console.log( data.types[0].type.name)
-            const { types } = data
-
-            setPkType(String(types[0].type.name.toString()))
-            console.log(pkType)
-            return String(types[0].type.name.toString())
-
-        } catch (error) {
-
-            return ''
-            console.warn(error)
-        }
-
-    }
-
     async function searchPokemon() {
         try {
             if (query.toLowerCase()) {
                 const { data } = await api.get(`/${query}`)
-
                 setPokemons(data.forms)
-                //setPkType(data.types[0].type.name)
-                //console.log(data.types[0].type.name)
             } else {
                 const { data } = await api.get('/?offset=0&limit=60')
                 setPokemons(data.results)
             }
-
         } catch (error) {
             console.warn(error)
         }
     }
-
-
-
 
     return (
         <SafeAreaView>
@@ -112,18 +81,12 @@ const Home = () => {
         const { name, url } = item.item
         const part = url.split("/")
         const id_pk = part[part.length - 2]
-
-        //getType(id_pk)
-
-        //console.log(type)
-
-
         return (
             <StyButtonCard>
                 <PkCard
                     name={name.charAt(0).toUpperCase() + name.slice(1)}
                     id={id_pk}
-                    typeColor={'#898989'}/>
+                    typeColor={theme.cardColors.normal} />
             </StyButtonCard>
         )
     }

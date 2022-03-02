@@ -1,7 +1,8 @@
 # 💻 pokedex!
 
-![cover](cover.jpg?style=flat)
-
+<p>
+  ![cover](cover.jpg?style=flat)
+</p>
 
 Desafio para desenvolver uma pokedex do camp ioasys
 
